@@ -217,10 +217,6 @@ Overall 96%
 · A11Y Project<br>
 · MDN Web Accessibility
 
-📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
-
 🙏 Agradecimentos
 
 · Equipe do W3C WAI pelas diretrizes WCAG<br>
