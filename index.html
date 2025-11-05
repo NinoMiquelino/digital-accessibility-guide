@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade Digital: Como o Código Pode Incluir Mais Pessoas</title>
+    <meta name="author" content="Onivaldo Miquelino">  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Estilos Customizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Skip link para navegação por teclado -->
+    <a href="#main-content" class="skip-link focus-visible">Pular para o conteúdo principal</a>
+    
+    <!-- Header/Navegação -->
+    <header role="banner" class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2 focus-visible rounded p-1">
+                <i class="fas fa-universal-access text-blue-600 text-2xl" aria-hidden="true"></i>
+                <span class="text-xl font-bold text-blue-700">Acessibilidade Digital</span>
+            </a>
+            
+            <!-- Menu de navegação -->
+            <nav role="navigation" aria-label="Navegação principal">
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#inicio" class="font-medium hover:text-blue-600 focus-visible rounded p-1">Início</a></li>
+                    <li><a href="#boas-praticas" class="font-medium hover:text-blue-600 focus-visible rounded p-1">Boas Práticas</a></li>
+                    <li><a href="#exemplos" class="font-medium hover:text-blue-600 focus-visible rounded p-1">Exemplos</a></li>
+                    <li><a href="#recursos" class="font-medium hover:text-blue-600 focus-visible rounded p-1">Recursos</a></li>
+                    <li><a href="#contato" class="font-medium hover:text-blue-600 focus-visible rounded p-1">Contato</a></li>
+                </ul>
+                
+                <!-- Botão menu mobile -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus-visible rounded p-2" 
+                        aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-xl" aria-hidden="true"></i>
+                    <span class="sr-only">Abrir menu</span>
+                </button>
+            </nav>
+        </div>
+        
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <ul class="space-y-2">
+                <li><a href="#inicio" class="block py-2 px-4 hover:bg-blue-50 focus-visible rounded">Início</a></li>
+                <li><a href="#boas-praticas" class="block py-2 px-4 hover:bg-blue-50 focus-visible rounded">Boas Práticas</a></li>
+                <li><a href="#exemplos" class="block py-2 px-4 hover:bg-blue-50 focus-visible rounded">Exemplos</a></li>
+                <li><a href="#recursos" class="block py-2 px-4 hover:bg-blue-50 focus-visible rounded">Recursos</a></li>
+                <li><a href="#contato" class="block py-2 px-4 hover:bg-blue-50 focus-visible rounded">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="main-content" role="main">
+        <!-- Seção Hero -->
+        <section id="inicio" class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Acessibilidade Digital</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Como o código pode incluir mais pessoas na experiência digital</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#boas-praticas" class="bg-white text-blue-700 font-semibold py-3 px-6 rounded-lg hover:bg-blue-50 focus-visible transition-all">
+                        <i class="fas fa-book mr-2" aria-hidden="true"></i>Conhecer Boas Práticas
+                    </a>
+                    <button id="high-contrast-toggle" class="bg-transparent border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-700 focus-visible transition-all">
+                        <i class="fas fa-adjust mr-2" aria-hidden="true"></i>Alto Contraste
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Introdução -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold mb-6 text-blue-700">Por que acessibilidade digital importa?</h2>
+                    <p class="text-lg mb-6">Mais de 1 bilhão de pessoas no mundo vivem com algum tipo de deficiência. A acessibilidade digital não é apenas uma questão de inclusão, mas também uma obrigação legal em muitos países e uma oportunidade de negócio.</p>
+                    <p class="text-lg">Quando desenvolvemos com acessibilidade em mente, criamos experiências melhores para todos os usuários, independentemente de suas habilidades.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Boas Práticas -->
+        <section id="boas-praticas" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">Boas Práticas de Acessibilidade</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card 1: ARIA -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="bg-blue-600 text-white p-4">
+                            <i class="fas fa-code text-3xl mb-2" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold">Atributos ARIA</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4">ARIA (Accessible Rich Internet Applications) fornece semântica adicional para elementos HTML, tornando o conteúdo mais acessível para tecnologias assistivas.</p>
+                            <div class="bg-gray-100 p-4 rounded text-sm font-mono">
+                                &lt;button aria-label="Fechar janela"&gt;X&lt;/button&gt;
+                            </div>
+                            <button class="mt-4 text-blue-600 font-medium hover:text-blue-800 focus-visible rounded p-1">
+                                Saiba mais <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2: Contraste -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="bg-green-600 text-white p-4">
+                            <i class="fas fa-palette text-3xl mb-2" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold">Contraste de Cores</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4">Garanta que o contraste entre texto e fundo seja suficiente para pessoas com baixa visão ou daltonismo.</p>
+                            <div class="flex space-x-4 mb-4">
+                                <div class="bg-black text-white p-2 rounded text-center flex-1">
+                                    <span class="font-bold">AAA</span>
+                                </div>
+                                <div class="bg-blue-700 text-white p-2 rounded text-center flex-1">
+                                    <span class="font-bold">AA</span>
+                                </div>
+                                <div class="bg-gray-400 text-black p-2 rounded text-center flex-1">
+                                    <span class="font-bold">Ruim</span>
+                                </div>
+                            </div>
+                            <button class="mt-4 text-green-600 font-medium hover:text-green-800 focus-visible rounded p-1">
+                                Saiba mais <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 3: Navegação por Teclado -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="bg-purple-600 text-white p-4">
+                            <i class="fas fa-keyboard text-3xl mb-2" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold">Navegação por Teclado</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4">Todos os elementos interativos devem ser acessíveis e operáveis apenas com o teclado, seguindo uma ordem lógica.</p>
+                            <ul class="list-disc pl-5 mb-4 space-y-1">
+                                <li>Use Tab para navegar</li>
+                                <li>Enter/Space para ativar</li>
+                                <li>Esc para fechar/cancelar</li>
+                                <li>Teclas de seta para menus</li>
+                            </ul>
+                            <button class="mt-4 text-purple-600 font-medium hover:text-purple-800 focus-visible rounded p-1">
+                                Saiba mais <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 4: Navegação por Voz -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="bg-red-600 text-white p-4">
+                            <i class="fas fa-microphone text-3xl mb-2" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold">Navegação por Voz</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4">Garanta que seu site seja compatível com softwares de reconhecimento de voz, usando elementos semânticos e rótulos claros.</p>
+                            <div class="bg-gray-100 p-4 rounded text-sm">
+                                <p>"Clique em 'Enviar'"</p>
+                                <p>"Vá para 'Contato'"</p>
+                                <p>"Preencha 'Nome'"</p>
+                            </div>
+                            <button class="mt-4 text-red-600 font-medium hover:text-red-800 focus-visible rounded p-1">
+                                Saiba mais <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 5: Textos Alternativos -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="bg-yellow-600 text-white p-4">
+                            <i class="fas fa-image text-3xl mb-2" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold">Textos Alternativos</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4">Forneça descrições textuais para imagens, gráficos e outros elementos visuais para usuários de leitores de tela.</p>
+                            <div class="bg-gray-100 p-4 rounded text-sm font-mono">
+                                &lt;img src="grafico.png" alt="Gráfico de vendas mostrando crescimento de 15% no último trimestre"&gt;
+                            </div>
+                            <button class="mt-4 text-yellow-600 font-medium hover:text-yellow-800 focus-visible rounded p-1">
+                                Saiba mais <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Card 6: Estrutura Semântica -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
+                        <div class="bg-indigo-600 text-white p-4">
+                            <i class="fas fa-sitemap text-3xl mb-2" aria-hidden="true"></i>
+                            <h3 class="text-xl font-bold">Estrutura Semântica</h3>
+                        </div>
+                        <div class="p-6">
+                            <p class="mb-4">Use elementos HTML semânticos para fornecer significado e estrutura ao conteúdo, facilitando a navegação para leitores de tela.</p>
+                            <div class="bg-gray-100 p-4 rounded text-sm font-mono text-xs">
+                                &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;footer&gt;
+                            </div>
+                            <button class="mt-4 text-indigo-600 font-medium hover:text-indigo-800 focus-visible rounded p-1">
+                                Saiba mais <i class="fas fa-arrow-right ml-1" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Exemplos -->
+        <section id="exemplos" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">Exemplos Práticos</h2>
+                
+                <div class="max-w-4xl mx-auto">
+                    <!-- Exemplo 1: Formulário Acessível -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4 text-green-700">Formulário Acessível</h3>
+                        <div class="bg-gray-100 p-6 rounded-lg">
+                            <form class="space-y-4">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium text-gray-700 mb-1">Nome completo *</label>
+                                    <input type="text" id="nome" name="nome" required 
+                                           class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                           aria-required="true">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail *</label>
+                                    <input type="email" id="email" name="email" required 
+                                           class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                           aria-required="true">
+                                    <p class="text-sm text-gray-500 mt-1" id="email-help">Seu e-mail não será compartilhado</p>
+                                </div>
+                                
+                                <div>
+                                    <fieldset class="border border-gray-300 p-4 rounded">
+                                        <legend class="text-sm font-medium text-gray-700 px-2">Como você prefere ser contactado?</legend>
+                                        <div class="space-y-2 mt-2">
+                                            <div class="flex items-center">
+                                                <input type="radio" id="contato-email" name="contato" value="email" class="mr-2 focus:ring-blue-500">
+                                                <label for="contato-email">E-mail</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="radio" id="contato-telefone" name="contato" value="telefone" class="mr-2 focus:ring-blue-500">
+                                                <label for="contato-telefone">Telefone</label>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <input type="radio" id="contato-whatsapp" name="contato" value="whatsapp" class="mr-2 focus:ring-blue-500">
+                                                <label for="contato-whatsapp">WhatsApp</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                
+                                <div>
+                                    <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-1">Mensagem</label>
+                                    <textarea id="mensagem" name="mensagem" rows="4" 
+                                              class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                              aria-describedby="mensagem-help"></textarea>
+                                    <p class="text-sm text-gray-500 mt-1" id="mensagem-help">Descreva sua dúvida ou solicitação</p>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="consentimento" name="consentimento" required 
+                                           class="mr-2 focus:ring-blue-500" aria-required="true">
+                                    <label for="consentimento" class="text-sm">Concordo com os termos de privacidade *</label>
+                                </div>
+                                
+                                <button type="submit" class="bg-blue-600 text-white font-medium py-2 px-6 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+                                    Enviar Mensagem
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- Exemplo 2: Modal Acessível -->
+                    <div class="mb-12">
+                        <h3 class="text-2xl font-bold mb-4 text-purple-700">Modal Acessível</h3>
+                        <button id="open-modal" class="bg-purple-600 text-white font-medium py-2 px-6 rounded hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-all">
+                            Abrir Modal Acessível
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden" 
+                             role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+                            <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+                                <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded p-1" 
+                                        aria-label="Fechar modal">
+                                    <i class="fas fa-times text-xl" aria-hidden="true"></i>
+                                </button>
+                                
+                                <h3 id="modal-title" class="text-xl font-bold text-purple-700 mb-2">Este é um modal acessível</h3>
+                                <p id="modal-desc" class="mb-4">Este modal implementa todas as boas práticas de acessibilidade:</p>
+                                <ul class="list-disc pl-5 mb-4 space-y-1">
+                                    <li>Foco é mantido dentro do modal quando aberto</li>
+                                    <li>Tecla ESC fecha o modal</li>
+                                    <li>Foco retorna ao botão que abriu o modal ao fechar</li>
+                                    <li>Atributos ARIA apropriados</li>
+                                </ul>
+                                <button class="bg-purple-600 text-white font-medium py-2 px-4 rounded hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-all">
+                                    Ação Principal
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Exemplo 3: Tabela Acessível -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-700">Tabela Acessível</h3>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white border border-gray-300" aria-describedby="table-desc">
+                                <caption id="table-desc" class="sr-only">Estatísticas de acessibilidade em sites brasileiros</caption>
+                                <thead class="bg-gray-100">
+                                    <tr>
+                                        <th scope="col" class="py-3 px-4 text-left font-medium text-gray-700 border-b">Categoria</th>
+                                        <th scope="col" class="py-3 px-4 text-left font-medium text-gray-700 border-b">Sites Testados</th>
+                                        <th scope="col" class="py-3 px-4 text-left font-medium text-gray-700 border-b">Conformidade</th>
+                                        <th scope="col" class="py-3 px-4 text-left font-medium text-gray-700 border-b">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="hover:bg-gray-50">
+                                        <th scope="row" class="py-3 px-4 border-b font-medium">E-commerce</th>
+                                        <td class="py-3 px-4 border-b">150</td>
+                                        <td class="py-3 px-4 border-b">42%</td>
+                                        <td class="py-3 px-4 border-b">
+                                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                                <i class="fas fa-exclamation-triangle mr-1" aria-hidden="true"></i> Precisa melhorar
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <th scope="row" class="py-3 px-4 border-b font-medium">Governo</th>
+                                        <td class="py-3 px-4 border-b">80</td>
+                                        <td class="py-3 px-4 border-b">68%</td>
+                                        <td class="py-3 px-4 border-b">
+                                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                                <i class="fas fa-check-circle mr-1" aria-hidden="true"></i> Bom
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <th scope="row" class="py-3 px-4 border-b font-medium">Educação</th>
+                                        <td class="py-3 px-4 border-b">120</td>
+                                        <td class="py-3 px-4 border-b">35%</td>
+                                        <td class="py-3 px-4 border-b">
+                                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                                <i class="fas fa-times-circle mr-1" aria-hidden="true"></i> Crítico
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <th scope="row" class="py-3 px-4 border-b font-medium">Saúde</th>
+                                        <td class="py-3 px-4 border-b">90</td>
+                                        <td class="py-3 px-4 border-b">58%</td>
+                                        <td class="py-3 px-4 border-b">
+                                            <span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                                <i class="fas fa-exclamation-triangle mr-1" aria-hidden="true"></i> Precisa melhorar
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Recursos -->
+        <section id="recursos" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">Recursos e Ferramentas</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Recurso 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all hover:shadow-lg">
+                        <i class="fas fa-tools text-4xl text-blue-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold mb-2">Ferramentas de Teste</h3>
+                        <p class="text-gray-600 mb-4">Extensões e softwares para testar a acessibilidade do seu site.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 focus-visible rounded p-1">
+                            Explorar <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Recurso 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all hover:shadow-lg">
+                        <i class="fas fa-book text-4xl text-green-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold mb-2">Documentação</h3>
+                        <p class="text-gray-600 mb-4">Guias completos sobre WCAG e práticas recomendadas.</p>
+                        <a href="#" class="text-green-600 font-medium hover:text-green-800 focus-visible rounded p-1">
+                            Explorar <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Recurso 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all hover:shadow-lg">
+                        <i class="fas fa-video text-4xl text-purple-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold mb-2">Tutoriais em Vídeo</h3>
+                        <p class="text-gray-600 mb-4">Aprenda com exemplos práticos e demonstrações.</p>
+                        <a href="#" class="text-purple-600 font-medium hover:text-purple-800 focus-visible rounded p-1">
+                            Explorar <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Recurso 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center transition-all hover:shadow-lg">
+                        <i class="fas fa-users text-4xl text-red-600 mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold mb-2">Comunidade</h3>
+                        <p class="text-gray-600 mb-4">Conecte-se com especialistas e entusiastas.</p>
+                        <a href="#" class="text-red-600 font-medium hover:text-red-800 focus-visible rounded p-1">
+                            Explorar <i class="fas fa-external-link-alt ml-1" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contato" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-700">Entre em Contato</h2>
+                
+                <div class="max-w-2xl mx-auto bg-gray-100 p-8 rounded-lg">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="contato-nome" class="block text-sm font-medium text-gray-700 mb-1">Nome *</label>
+                                <input type="text" id="contato-nome" name="contato-nome" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                       aria-required="true">
+                            </div>
+                            
+                            <div>
+                                <label for="contato-email" class="block text-sm font-medium text-gray-700 mb-1">E-mail *</label>
+                                <input type="email" id="contato-email" name="contato-email" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                       aria-required="true">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="contato-assunto" class="block text-sm font-medium text-gray-700 mb-1">Assunto *</label>
+                            <input type="text" id="contato-assunto" name="contato-assunto" required 
+                                   class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                   aria-required="true">
+                        </div>
+                        
+                        <div>
+                            <label for="contato-mensagem" class="block text-sm font-medium text-gray-700 mb-1">Mensagem *</label>
+                            <textarea id="contato-mensagem" name="contato-mensagem" rows="5" required 
+                                      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                      aria-required="true"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white font-medium py-3 px-6 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Acessibilidade Digital</h3>
+                    <p class="text-gray-300">Promovendo inclusão através de código acessível e conscientização.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-300 hover:text-white focus-visible rounded p-1">Início</a></li>
+                        <li><a href="#boas-praticas" class="text-gray-300 hover:text-white focus-visible rounded p-1">Boas Práticas</a></li>
+                        <li><a href="#exemplos" class="text-gray-300 hover:text-white focus-visible rounded p-1">Exemplos</a></li>
+                        <li><a href="#recursos" class="text-gray-300 hover:text-white focus-visible rounded p-1">Recursos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-1">WCAG 2.1</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-1">Ferramentas de Teste</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-1">Checklist</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-1">Legislação</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Conecte-se</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-2" aria-label="Twitter">
+                            <i class="fab fa-twitter text-xl" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-2" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin text-xl" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-2" aria-label="GitHub">
+                            <i class="fab fa-github text-xl" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white focus-visible rounded p-2" aria-label="YouTube">
+                            <i class="fab fa-youtube text-xl" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Acessibilidade Digital. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+<!-- Botão de ativação por voz -->
+<button id="voice-command-btn" class="fixed bottom-6 right-6 bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-40 transition-all" 
+        aria-label="Ativar comandos de voz" title="Clique e diga um comando">
+    <i class="fas fa-microphone text-xl" aria-hidden="true"></i>
+</button>
+
+<!-- Modal de feedback de voz -->
+<div id="voice-feedback" class="fixed bottom-24 right-6 bg-white p-4 rounded-lg shadow-lg hidden z-40 max-w-xs">
+    <div class="flex items-center space-x-3">
+        <div id="voice-listening" class="hidden text-blue-600">
+            <i class="fas fa-circle animate-pulse text-xl" aria-hidden="true"></i>
+        </div>
+        <div id="voice-processing" class="hidden text-yellow-600">
+            <i class="fas fa-spinner fa-spin text-xl" aria-hidden="true"></i>
+        </div>
+        <div id="voice-success" class="hidden text-green-600">
+            <i class="fas fa-check-circle text-xl" aria-hidden="true"></i>
+        </div>
+        <div id="voice-error" class="hidden text-red-600">
+            <i class="fas fa-times-circle text-xl" aria-hidden="true"></i>
+        </div>
+        <p id="voice-message" class="text-sm font-medium"></p>
+    </div>
+</div>
+
+<!-- Modal de ajuda de comandos -->
+<div id="voice-help-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden" 
+     role="dialog" aria-modal="true" aria-labelledby="voice-help-title">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative">
+        <button id="close-voice-help" class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1" 
+                aria-label="Fechar ajuda de comandos de voz">
+            <i class="fas fa-times text-xl" aria-hidden="true"></i>
+        </button>
+        
+        <h3 id="voice-help-title" class="text-xl font-bold text-blue-700 mb-4">Comandos de Voz Disponíveis</h3>
+        
+        <div class="space-y-3">
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Início"</span>
+                <span class="text-sm text-gray-600">Ir para a página inicial</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Boas práticas"</span>
+                <span class="text-sm text-gray-600">Ir para boas práticas</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Exemplos"</span>
+                <span class="text-sm text-gray-600">Ver exemplos práticos</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Recursos"</span>
+                <span class="text-sm text-gray-600">Acessar recursos</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Contato"</span>
+                <span class="text-sm text-gray-600">Ir para contato</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Abrir modal"</span>
+                <span class="text-sm text-gray-600">Abrir modal de exemplo</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Alto contraste"</span>
+                <span class="text-sm text-gray-600">Alternar alto contraste</span>
+            </div>
+            <div class="flex justify-between items-center border-b pb-2">
+                <span class="font-medium">"Ajuda"</span>
+                <span class="text-sm text-gray-600">Mostrar esta ajuda</span>
+            </div>
+        </div>
+        
+        <button id="start-voice-tutorial" class="w-full mt-6 bg-blue-600 text-white font-medium py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all">
+            Iniciar Tutorial
+        </button>
+    </div>
+</div>    
+
+<script src="script.js"></script>
+
+</body>
+</html>    
