@@ -134,43 +134,43 @@ digital-accessibility-guide/
 
 ✅ Perceptível
 
-· Textos alternativos para imagens
-· Legendas e transcrições
-· Contraste de cores adequado
-· Redimensionamento de texto
+· Textos alternativos para imagens<br>
+· Legendas e transcrições<br>
+· Contraste de cores adequado<br>
+· Redimensionamento de texto<br>
 · Conteúdo apresentável de múltiplas formas
 
 ✅ Operável
 
-· Navegação completa por teclado
-· Tempo suficiente para interação
-· Conteúdo sem seizures
-· Navegação facilitada
+· Navegação completa por teclado<br>
+· Tempo suficiente para interação<br>
+· Conteúdo sem seizures<br>
+· Navegação facilitada<br>
 · Modos de entrada múltiplos
 
 ✅ Compreensível
 
-· Texto legível e compreensível
-· Funcionamento previsível
-· Assistência em entrada de dados
+· Texto legível e compreensível<br>
+· Funcionamento previsível<br>
+· Assistência em entrada de dados<br>
 · Navegação consistente
 
 ✅ Robusto
 
-· Compatibilidade com tecnologias assistivas
-· HTML semântico e válido
-· Atributos ARIA apropriados
+· Compatibilidade com tecnologias assistivas<br>
+· HTML semântico e válido<br>
+· Atributos ARIA apropriados<br>
 · Testado com leitores de tela
 
 🧪 Testes de Acessibilidade
 
 O projeto foi testado com:
 
-· NVDA + Firefox
-· JAWS + Chrome
-· VoiceOver + Safari
-· Navegação apenas por teclado
-· Extensões de verificação (axe, WAVE)
+· NVDA + Firefox<br>
+· JAWS + Chrome<br>
+· VoiceOver + Safari<br>
+· Navegação apenas por teclado<br>
+· Extensões de verificação (axe, WAVE)<br>
 · Simuladores de daltonismo
 
 🤝 Contribuindo
@@ -185,10 +185,10 @@ Contribuições são bem-vindas! Siga estos passos:
 
 📝 Guidelines para Contribuição
 
-· Siga as diretrizes WCAG 2.1 Level AA
-· Mantenha a semântica HTML
-· Adicione atributos ARIA quando necessário
-· Teste a navegação por teclado
+· Siga as diretrizes WCAG 2.1 Level AA<br>
+· Mantenha a semântica HTML<br>
+· Adicione atributos ARIA quando necessário<br>
+· Teste a navegação por teclado<br>
 · Verifique o contraste de cores
 
 📊 Estatísticas de Acessibilidade
@@ -202,19 +202,19 @@ Overall 96%
 
 🌟 Próximas Funcionalidades
 
-· Internacionalização (inglês, espanhol)
-· Modo escuro automático
-· Mais comandos de voz
-· Testes automatizados de acessibilidade
-· PWA (Progressive Web App)
+· Internacionalização (inglês, espanhol)<br>
+· Modo escuro automático<br>
+· Mais comandos de voz<br>
+· Testes automatizados de acessibilidade<br>
+· PWA (Progressive Web App)<br>
 · Dashboard de métricas de acessibilidade
 
 📚 Recursos e Referências
 
-· WCAG 2.1
-· ARIA Authoring Practices
-· WebAIM
-· A11Y Project
+· WCAG 2.1<br>
+· ARIA Authoring Practices<br>
+· WebAIM<br>
+· A11Y Project<br>
 · MDN Web Accessibility
 
 📄 Licença
@@ -223,8 +223,8 @@ Este projeto está sob a licença MIT. Veja o arquivo LICENSE para detalhes.
 
 🙏 Agradecimentos
 
-· Equipe do W3C WAI pelas diretrizes WCAG
-· Comunidade de acessibilidade web
+· Equipe do W3C WAI pelas diretrizes WCAG<br>
+· Comunidade de acessibilidade web<br>
 · Todos os testadores e contribuidores
 
 ---
